@@ -16,7 +16,8 @@ def random_game():
     soup = bs4.BeautifulSoup(req_game.text, "html.parser")
 
     name = soup.find('div', id="appHubAppName").getText()
-
+    prise = soup.find('div', class_="game_purchase_price price").getText()
     print(name)
+    print(prise)
 
 random_game()
